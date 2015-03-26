@@ -45,6 +45,7 @@ module.exports = (robot) ->
      for i in [0...Math.min(3, tuples.length)]
         username = tuples[i][0]
         points = tuples[i][1]
+        continue if points == 0
         point_label = if points == 1 then "point" else "points"
         leader = if i == 0 then "All hail supreme leader!" else ""
         newline = if i < Math.min(3, tuples.length) - 1 then '\n' else ''
